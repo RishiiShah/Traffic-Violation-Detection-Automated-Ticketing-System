@@ -198,7 +198,3 @@ This project is built upon the cutting-edge research in object detection. If you
 <div align="center">
 <sub>Developed with ❤️ for safer roads in India.</sub>
 </div>
-
-```
-
-```
