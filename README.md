@@ -1,10 +1,3 @@
-Here is a comprehensive, professional, and detailed `README.md`. It is structured to serve both as a technical documentation reference and a project showcase.
-
-You can copy the code block below directly into your repository.
-
----
-
-```markdown
 # 🚦 Intelligent Traffic Surveillance System (ITSS)
 
 ![Python](https://img.shields.io/badge/Python-3.9%2B-blue?style=for-the-badge&logo=python)
