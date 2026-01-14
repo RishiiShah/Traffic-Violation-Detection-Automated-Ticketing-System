@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      .header {
+        text-align: center;
+      }
+      .logo {
+        width: 100px;
+        margin-bottom: 20px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+      th,
+      td {
+        border: 1px solid black;
+        padding: 10px;
+        text-align: left;
+      }
+      .violation-image {
+        width: 100%;
+        max-width: 600px;
+        margin-top: 20px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <img src="{{ logo_url }}" class="logo" alt="Logo" />
+      <h1>Maharashtra Traffic Police</h1>
+      <h2>Challan Details</h2>
+    </div>
+    <table>
+      <tr>
+        <th>Challan No.</th>
+        <td>{{ challan_no }}</td>
+      </tr>
+      <tr>
+        <th>Violation Date & Time</th>
+        <td>{{ violation_datetime }}</td>
+      </tr>
+      <tr>
+        <th>Officer Name</th>
+        <td>{{ officer_name }}</td>
+      </tr>
+      <tr>
+        <th>Designation</th>
+        <td>{{ designation }}</td>
+      </tr>
+      <tr>
+        <th>Vehicle No.</th>
+        <td>{{ vehicle_no }}</td>
+      </tr>
+      <tr>
+        <th>Owner Name</th>
+        <td>{{ owner_name }}</td>
+      </tr>
+      <tr>
+        <th>Owner Address</th>
+        <td>{{ owner_address }}</td>
+      </tr>
+      <tr>
+        <th>Mobile No.</th>
+        <td>{{ mobile_no }}</td>
+      </tr>
+      <tr>
+        <th>Payment Status</th>
+        <td>{{ payment_status }}</td>
+      </tr>
+      <tr>
+        <th>Comp. Fee (Rs)</th>
+        <td>{{ fee }}</td>
+      </tr>
+      <tr>
+        <th>Violation Description</th>
+        <td>{{ violation_description | safe}}</td>
+      </tr>
+    </table>
+
+    <!-- Violation Images Section -->
+    <!-- Violation Images Section -->
+    <div>
+      <h3>Violation Images</h3>
+      {% for image in violation_images %}
+      <img
+        src="{{ image }}"
+        class="violation-image"
+        alt="Violation Image {{ loop.index }}" />
+      {% endfor %}
+    </div>
+  </body>
+</html>
